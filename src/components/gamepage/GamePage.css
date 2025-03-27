@@ -1,0 +1,59 @@
+/* GamePage.css */
+
+.gamepage-content {
+  text-align: center;
+  padding: 20px;
+  transition: background-color 0.5s ease; /* Smooth background transition */
+}
+
+.gamepage-content.loading {
+  background-color: rgba(0, 0, 0, 0.7); /* Darken the background during loading */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.loading-screen {
+  width: 80%;
+  max-width: 400px;
+}
+
+.loading-bar-background {
+  background-color: #f3f3f3;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.loading-bar {
+  background-color: #202020;
+  height: 100%;
+  width: 0;
+  border-radius: 10px;
+  transition: width 0.3s ease-in-out;
+}
+
+.loading-text {
+  margin-top: 20px;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.game-content {
+  color: white;
+  /* Add styling for actual game content */
+}
+
+@media (max-width: 768px) {
+  .gamepage-content.loading {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .loading-screen {
+    width: 100%; /* Make the loading screen wider on smaller screens */
+  }
+}
