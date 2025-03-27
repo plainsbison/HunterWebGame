@@ -1,0 +1,19 @@
+/* Global styles */
+body {
+  font-family: 'Playfair Display', serif; /* Apply Playfair Display globally */
+  margin: 0;
+  font-size: 16px; /* Adjust this based on your design preferences */
+  background-color: #252525; /* Set the background color for the whole page */
+  color: white; /* Ensure text color is white by default */
+}
+
+/* Ensure the app itself doesn't overwrite the background */
+.App {
+  min-height: 100vh; /* Ensure the App component takes up the full height of the viewport */
+  background-color: inherit; /* Inherit background color from body */
+}
+
+/* Header and Footer styles (just make sure they don't overwrite the body background) */
+header, footer {
+  background-color: inherit; /* Ensure the header/footer don't override the background */
+}

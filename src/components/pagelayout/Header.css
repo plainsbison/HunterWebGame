@@ -1,0 +1,36 @@
+/* Header Styling */
+.header {
+  background-color: #151515;  /* Set header background color */
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;  /* Space out title and icons */
+  align-items: center;
+  position: relative;
+}
+
+.header-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 2.5em;
+  margin: 0;
+  
+  /* Adding a 3D effect using text-shadow */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9), /* Main shadow */
+               4px 4px 10px rgba(0, 0, 0, 0.9), /* Secondary shadow for depth */
+               6px 6px 15px rgba(0, 0, 0, 1.8); /* Tertiary shadow */
+
+  /* Make the text appear to pop out with a slight rotation */
+  transition: transform 0.3s ease, text-shadow 0.3s ease; /* Smooth transition */
+
+  /* Initial transformation (no rotation) */
+  transform: rotateX(0deg) rotateY(0deg);
+}
+
+/* Adding interactivity with hover effect */
+.header-title:hover {
+  transform: rotateX(5deg) rotateY(5deg); /* Slight rotation when hovered */
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6), /* Stronger shadow on hover */
+               6px 6px 20px rgba(0, 0, 0, 0.5),
+               8px 8px 25px rgba(0, 0, 0, 0.4);
+}
